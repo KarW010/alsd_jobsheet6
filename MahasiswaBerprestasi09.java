@@ -1,6 +1,6 @@
 public class MahasiswaBerprestasi09{
     Mahasiswa09 [] listMhs = new Mahasiswa09[5];
-    int idx;
+    int idx = 0;
 
     void tambah (Mahasiswa09 m){
         if (idx<listMhs.length){
@@ -13,8 +13,10 @@ public class MahasiswaBerprestasi09{
 
     void tampil (){
         for (Mahasiswa09 m:listMhs){
-            m.tampilInformasi();
-            System.out.println("----------------------------");
+            if (m != null){
+                m.tampilInformasi();
+                System.out.println("----------------------------");
+            }
         }
     }
 
